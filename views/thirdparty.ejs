@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../public/style.scss">
 </head>
 <body>
-    <main>
     <header>
         <nav>
             <ul>
@@ -30,7 +29,52 @@
             </ul>
         </nav>
     </header>
-
+    <main>
+        <form style="text-align:center;"method="GET" action="/thirdAPI">
+            <input
+                type="text"
+                name=""
+                id="searchBox"
+                placeholder="Enter Search Term"
+                required
+            />
+            <label for="pricingOptions">Choose Pricing</label>
+                <select id="pricingOptions">
+                    <option value="--">None</option>
+                    <option value="Free">Free</option>
+                    <option value="Paid">Paid</option>
+                </select>
+            <label for="SearchOrder">Sort By:</label>
+                <select id="searchOrder">
+                    <option value="--">Default</option>
+                    <option value="relevance">Relevance</option>
+                    <option value="most-reviewed">Most Reviewed</option>
+                    <option value="highest-rated">Highest Rated</option>
+                    <option value="newest">Newest</option>
+                    <option value="price-low-to-high">Price Low to High</option>
+                    <option value="price-high-to-low">Price High to Low</option>
+                </select>
+            <input
+                type="submit"
+                id="submitButton"
+                value="Search"
+            />
+        </form>
+        <article id="thirdAPIArticle" style="display:none">
+            <% if(results){ var x =document.getElementById("thirdAPIArticle"); x.style.display=block; }
+            <% for (var i = 0; i < results.length;i++){%>
+                <a href="https://www.udemy.com/<%= results[i].url %>">
+                    <section class="udemyCourse">
+                        <p><%= results[i].id %></p>
+                        <p><%= results[i].title %></p>
+                        <p><%= results[i]. %></p>
+                        <p><%= results[i].price %></p>
+                        <p><%= results[i].price %></p>
+                    </section>
+                </a>
+            <% } %>
+        </article>
+    </main>
     <footer>
         <p>Copyright &copy; 2022 | Hope Hacks Group</p>
         <a href="https://www.facebook.com/%22%3E
@@ -46,8 +90,6 @@
              <img class="logo" src="/hopehackimg/twitter.png" alt="twitter-logo">
         </a>
     </footer>
-
-    </main>
     <script src="../assets/script.js"></script>
 </body>
 </html>
