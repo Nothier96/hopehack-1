@@ -5,6 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('2J9NZFxF9yCu4vhnu');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     <link rel="stylesheet" href="../public/style.scss">
 </head>
 <body>
@@ -30,23 +52,31 @@
             </ul>
         </nav>
     </header>
-
+    <form id="contact-form">
+        <input type="hidden" name="contact_number">
+        <label>Name</label>
+        <input type="text" name="user_name">
+        <label>Email</label>
+        <input type="email" name="user_email">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <input type="submit" value="Send">
+    </form>
     <footer>
         <p>Copyright &copy; 2022 | Hope Hacks Group</p>
-        <a href="https://www.facebook.com/%22%3E
+        <a href="https://www.facebook.com/">
             <img class="logo" src="/hopehackimg/facebook.png" alt="facebook-logo">
         </a>
-        <a href="https://www.linkedin.com/%22%3E
+        <a href="https://www.linkedin.com/">
             <img class="logo" src="/hopehackimg/LinkedIn.png" alt="linkedin-logo">
         </a>
-        <a href="https://www.instagram.com/%22%3E
+        <a href="https://www.instagram.com/">
             <img class="logo" src="/hopehackimg/instagram.png" alt="instagram-logo">
         </a>
-        <a href="https://twitter.com/%22%3E
+        <a href="https://twitter.com/">
              <img class="logo" src="/hopehackimg/twitter.png" alt="twitter-logo">
         </a>
     </footer>
-
     </main>
     <script src="../assets/script.js"></script>
 </body>
