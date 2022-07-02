@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/first">First API</a>
+          </li>
+          <li>
+            <a href="/third">Third API</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- <h1>Courses Details</h1> -->
+    <div class="wrapper">
+      <% Object.keys(courseDetail).forEach(function(course){ %>
+      <div class="course"><h2><%-courseDetail[course].title %></h2></div>
+      <div class="course"><%-courseDetail[course].id%></div>
+      <div class="course"><%-courseDetail[course].price%></div>
+      <div class="course"><%-courseDetail[course].price_detail.currency%></div>
+      <div class="course"><%-courseDetail[course].is_paid%> <% }) %></div>
+    </div>
+    <!-- <% courseDetail %> -->
+  </body>
+</html>
