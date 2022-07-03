@@ -1,5 +1,7 @@
-const fetch = require("node-fetch");
+// const fetch = require("node-fetch");
 const express = require("express");
+const bodyParser = require("body-parser");
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -8,8 +10,13 @@ const port = process.env.PORT || 3000;
 app.use(express.static("public"));
 // app.use(express.static(path.resolve(__dirname, "public")));
 app.use("/css", express.static(__dirname + "public/css"));
-
+// app.use(bodyParser.urlencoded({ extended: true }));
+// var urlencodedParser = bodyParser.urlencoded({ extended: false });
+app.use(bodyParser.json());
+// var jsonParser = bodyParser.json();
+app.use(bodyParser.urlencoded({ extended: true }));
 //template engine
+// app.use(upload.array());
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
@@ -55,10 +62,10 @@ app.use("/", courseRouter);
 // app.get("/third", (req, res) => {
 //   res.render("thirdparty.ejs");
 // });
-// const client_id = "oobVGja6bsRkU5qU1PWjcMnjEK0nIMfgBttT0V8V";
-// const client_secret =
-//   "n8MLcxcTb4xS0cbKE4stYVWeawQ2u6oVxeHZDAD21PGFXfM8SqtD59PSHMomab9n233p5B0MrkLeGAjK9xMz7YqJoeQKrxRqHNxecbmyqvnPugnemfwQr4yKF0RmNw7L";
-// const client = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
+const client_id = "oobVGja6bsRkU5qU1PWjcMnjEK0nIMfgBttT0V8V";
+const client_secret =
+  "n8MLcxcTb4xS0cbKE4stYVWeawQ2u6oVxeHZDAD21PGFXfM8SqtD59PSHMomab9n233p5B0MrkLeGAjK9xMz7YqJoeQKrxRqHNxecbmyqvnPugnemfwQr4yKF0RmNw7L";
+const client = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 // let duration = "medium",
 //   ordering = "relevance",
 //   pricing = "price-paid",
@@ -89,6 +96,13 @@ app.use("/", courseRouter);
 //   const data = await response.json();
 //   console.log(data);
 // }
+// app.post("/form", (req, res) => {
+//   console.log(req.body);
+// });
+// let duration = req.body.duration,
+//     order = req.body.order,
+//     pricing = req.body.price,
+//     course = req.body.course;
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);

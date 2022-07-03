@@ -106,8 +106,23 @@ main{
 #cityOption::-moz-focus-inner {
   border: 0;
 }
+<<<<<<< HEAD
+body {
+  background-color: darkgrey;
+}
+.wrapper {
+  padding: 1rem;
+}
+.courses {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+=======
 #cityOption:focus{
   outline:none;
+>>>>>>> c303d2bfc620a22fd23eabc8379d2ed3325bfa67
 }
 #cityOption option{
   width: 60px;
