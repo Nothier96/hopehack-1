@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../public/css/style.scss">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header>
@@ -31,20 +31,20 @@
     </header>
 
 <main>
-    <form style="text-align:center;" method="GET" action="/firstAPI">
+    <form style="text-align:center;" method="POST" action="/firstAPI">
         <label for="cityOption">Choose your City</label>
-            <select id="cityOption" >
+            <select name="cityQuery"id="cityOption" >
                 <option value="houston">Houston</option>
                 <option value="atlanta">Atlanta</option>
                 <option value="charlotte">Charlotte</option>
                 <option value="richmond">Richmons</option>
             </select>
         <label for="schoolType">Choose Schools Type</label>
-            <select id="schoolType">
+            <select name="schoolType" id="schoolType">
                 <option value="--">None</option>
                 <option value="elementary">Elementary</option>
-                <option value="middle">Middle</option>
-                <option value="highs">HighSchool</option>
+                <option value="middleSchool">Middle</option>
+                <option value="highSchool">HighSchool</option>
                 <option value="university">University</option>
             </select>
         <input
@@ -57,18 +57,18 @@
     <footer>
         <p>Copyright &copy; 2022 | Hope Hacks Group</p>
         <a href="https://www.facebook.com/%22%3E
-            <img class="logo" src="hopehackimg/facebook.png" alt="facebook-logo">
+            <img class="logo" src="../images/facebook.jpeg" alt="facebook-logo">
         </a>
         <a href="https://www.linkedin.com/%22%3E
-            <img class="logo" src="hopehackimg/LinkedIn.png" alt="linkedin-logo">
+            <img class="logo" src="../images/LinkedIn.jpeg" alt="linkedin-logo">
         </a>
         <a href="https://www.instagram.com/%22%3E
-            <img class="logo" src="hopehackimg/instagram.png" alt="instagram-logo">
+            <img class="logo" src="../images/instagram.jpeg" alt="instagram-logo">
         </a>
         <a href="https://twitter.com/%22%3E
-             <img class="logo" src="hopehackimg/twitter.png" alt="twitter-logo">
+             <img class="logo" src="../images/twitter.jpeg" alt="twitter-logo">
         </a>
     </footer>
-    <script src="../assets/script.js"></script>
+    <script src="/js/slideshow.js"></script>
 </body>
 </html>
