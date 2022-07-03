@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/first">Schools</a>
+                </li>
+                <li>
+                    <a href="/third">Courses</a>
+                </li>
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form style="text-align:center;" method="POST" action="/thirdAPI">
+            <input
+                type="text"
+                name="searchQuery"
+                id="searchBox"
+                placeholder="Enter Search Term"
+                required
+            />
+            <label for="pricingOptions">Choose Pricing</label>
+                <select name="pricingQuery" id="pricingOptions">
+                    <option value="--">None</option>
+                    <option value="price-free">Free</option>
+                    <option value="price-paid">Paid</option>
+                </select>
+            <label for="SearchOrder">Sort By:</label>
+                <select name="searchOrderQuery" id="searchOrder">
+                    <option value="--">Default</option>
+                    <option value="relevance">Relevance</option>
+                    <option value="most-reviewed">Most Reviewed</option>
+                    <option value="highest-rated">Highest Rated</option>
+                    <option value="newest">Newest</option>
+                    <option value="price-low-to-high">Price Low to High</option>
+                    <option value="price-high-to-low">Price High to Low</option>
+                </select>
+            <input
+                type="submit"
+                id="submitButton"
+                value="Search"
+            />
+        </form>
+        <article id="thirdAPIArticle" style="display:none">
+            
+        </article>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2022 | Hope Hacks Group</p>
+        <a href="https://www.facebook.com/%22%3E
+            <img class="logo" src="../images/facebook.jpeg" alt="facebook-logo">
+        </a>
+        <a href="https://www.linkedin.com/%22%3E
+            <img class="logo" src="../images/LinkedIn.jpeg" alt="linkedin-logo">
+        </a>
+        <a href="https://www.instagram.com/%22%3E
+            <img class="logo" src="../images/instagram.jpeg" alt="instagram-logo">
+        </a>
+        <a href="https://twitter.com/%22%3E
+             <img class="logo" src="../images/twitter.jpeg" alt="twitter-logo">
+        </a>
+    </footer>
+    <script src="/js/slideshow.js"></script>
+</body>
+</html>
