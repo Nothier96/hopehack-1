@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="public/style.scss">
+    <link rel="stylesheet" href="public/css/style.scss">
 </head>
 <body>
     
@@ -16,10 +16,10 @@
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/first">First API</a>
+                    <a href="/first">Schools</a>
                 </li>
                 <li>
-                    <a href="/third">Third API</a>
+                    <a href="/third">Courses</a>
                 </li>
                 <li>
                     <a href="/about">About</a>
@@ -33,28 +33,37 @@
     
     <main>
         <section id="heroImage">
-            <article>
-                <h2>Welcome to our website</h2>
-                <a href="/first">Learn today!</a>
-            </article>
+                <figure>
+                    <img class="fade slides" src="images/slideshow/classroom.jpg" alt="classroom of children">
+                    <img class="fade slides" src="images/slideshow/classroom2.jpg" alt="classroom of young adults">
+                    <img class="fade slides" src="images/slideshow/classroom4.jpg" alt="classroom of children">
+                    <article id="heroText">                            
+                        <h2>Welcome to our website</h2>
+                        <a href="/first">Learn today!</a>
+                    </article>
+                </figure>
+                    <!-- <h2>Welcome to our website</h2>
+                    <a href="/first">Learn today!</a> -->
         </section>
     </main>
     
     <footer>
         <p>Copyright &copy; 2022 | ThinkHub </p>
         <a href="https://www.facebook.com/">
-            <img class="logo" src="/images/facebook.jpeg"alt="facebook-logo">
+            <img class="logo" src="images/facebook.jpeg"alt="facebook-logo">
         </a>
         <a href="https://www.linkedin.com/">
-            <img class="logo" src="/images/linkedin.jpeg" alt="linkedin-logo">
+            <img class="logo" src="images/linkedin.jpeg" alt="linkedin-logo">
         </a>
         <a href="https://www.instagram.com/">
-            <img class="logo" src="/images/instagram.jpeg" alt="instagram-logo">
+            <img class="logo" src="images/instagram.jpeg" alt="instagram-logo">
         </a>
         <a href="https://twitter.com/">
-             <img class="logo" src="/images/twitter.jpeg" alt="twitter-logo">
+             <img class="logo" src="images/twitter.jpeg" alt="twitter-logo">
         </a>
     </footer>
-    <script src="server.js"></script>
+
+    <script src="slideshow.js"></script>
+    <!-- <script src="server.js"></script> -->
 </body>
 </html>
