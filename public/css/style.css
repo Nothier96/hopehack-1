@@ -32,6 +32,21 @@ a:hover {
 }
 
 body {
-  background-color: #94ad64;
+  background-color: darkgrey;
+}
+
+.wrapper {
+  padding: 1rem;
+}
+
+.courses {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 /*# sourceMappingURL=style.css.map */

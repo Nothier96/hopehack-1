@@ -29,15 +29,72 @@
         </ul>
       </nav>
     </header>
+
+    <form action="/" id="myForm" method="POST">
+      <label for="searchBox">Choose course</label>
+      <input
+        type="text"
+        name="course"
+        id="searchBox"
+        placeholder="Enter Search Term"
+        required
+      />
+      <label for="pricingOptions">Pricing</label>
+      <select id="pricingOptions" name="price">
+        <option value="--"></option>
+        <option value="price-paid">Paid</option>
+        <option value="price-free">Free</option>
+      </select>
+      <select id="durationOptions" name="duration">
+        <option value="--">None</option>
+        <option value="short">Short</option>
+        <option value="long">Long</option>
+        <option value="medium">Medium</option>
+        <option value="extraLong">ExtraLong</option>
+      </select>
+      <label for="SearchOrder">Order by :</label>
+      <select id="searchOrder" name="order">
+        <option value="--">Default</option>
+        <option value="relevance">Relevance</option>
+        <option value="most-reviewed">Most Reviewed</option>
+        <option value="highest-rated">Highest Rated</option>
+        <option value="newest">Newest</option>
+        <option value="price-low-to-high">Price Low To High</option>
+        <option value="price-high-to-low">Price High To Low</option>
+      </select>
+      <input type="submit" id="submitButton" value="submit" />
+    </form>
+
     <!-- <h1>Courses Details</h1> -->
     <div class="wrapper">
-      <% Object.keys(courseDetail).forEach(function(course){ %>
-      <div class="course"><h2><%-courseDetail[course].title %></h2></div>
-      <div class="course"><%-courseDetail[course].id%></div>
-      <div class="course"><%-courseDetail[course].price%></div>
-      <div class="course"><%-courseDetail[course].price_detail.currency%></div>
-      <div class="course"><%-courseDetail[course].is_paid%> <% }) %></div>
+      <div class="courses">
+        <% Object.keys(courseDetail).forEach(function(course){ %>
+
+        <a href="" class="course_card">
+          <!-- <img src="<%%>" alt="" /> -->
+          <img
+            src=" <%- courseDetail[course].visible_instructors[0].image_100x100 %> "
+            alt=""
+          />
+          <h2><%-courseDetail[course].title %></h2>
+          <%-courseDetail[course].id%> <%-courseDetail[course].price%>
+          <%-courseDetail[course].price_detail.currency%>
+          <%-courseDetail[course].is_paid%>
+          <%-courseDetail[course].visible_instructors[0].title%>
+        </a>
+        <% }) %>
+      </div>
     </div>
     <!-- <% courseDetail %> -->
   </body>
+  <!-- <script>
+    const myForm = document.getElementById("myForm");
+    myForm.addEventListener("submit", (e) => {
+      // prevent page from fading away
+      e.preventDefault();
+
+      const formData = new FormData(this);
+      fetch(server.js);
+    });
+  </script> -->
 </html>
