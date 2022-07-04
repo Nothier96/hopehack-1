@@ -3,8 +3,8 @@ const bodyParser = require("body-parser");
 const courseRouter = express.Router();
 const axios = require("axios");
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+courseRouter.use(bodyParser.json());
+courseRouter.use(bodyParser.urlencoded({ extended: true }));
 courseRouter.get("/about", (req, res) => {
   res.render("about");
 });
