@@ -77,7 +77,11 @@
         <% if( courseDetail != null){ %> <%
         Object.keys(courseDetail).forEach(function(course){ %>
 
-        <a href="" class="course_card">
+        <a
+          href="https://www.udemy.com<%-courseDetail[course].url%>"
+          class="course_card"
+          target="_blank"
+        >
           <img
             src=" <%- courseDetail[course].visible_instructors[0].image_100x100%> "
             alt="<%-courseDetail[course].title %></"
