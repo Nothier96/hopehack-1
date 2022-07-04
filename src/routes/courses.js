@@ -31,10 +31,14 @@ courseRouter.post("/firstAPI", (req,res)=>{
       console.log('Connected to Database');
       const db=client.db('schoolDB');
       const schoolData = db.collection('schools');
+      let city = req.body.cityQuery
+let schoolType=req.body.schoolType
+var arrayNum=0; 
+
       schoolData.find().toArray()
       .then(result =>{
         console.log(req.body);
-        console.log(result);
+        console.log(result[0][city][schoolType]);
     })
       }); 
  } catch {}
