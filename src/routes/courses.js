@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const courseRouter = express.Router();
 const axios = require("axios");
+const connection= 'mongodb+srv://taigatop:MuzvoMZhYmXLSgTH@cluster0.qat9t7x.mongodb.net/?retryWrites=true&w=majority'
+const MongoClient=require('mongodb').MongoClient;
 
 courseRouter.use(bodyParser.json());
 courseRouter.use(bodyParser.urlencoded({ extended: true }));
@@ -28,13 +30,15 @@ courseRouter.post("/firstAPI", (req,res)=>{
        const db=client.db('schoolDB');
        const schoolData = db.collection('schools');
        let city = req.body.cityQuery
- let schoolType=req.body.schoolType
- var arrayNum=0; 
+      let schoolType=req.body.schoolType
+      var arrayNum=0; 
  
        schoolData.find().toArray()
-       .then(result =>{
-         console.log(req.body);
-         console.log(result[0][city][schoolType]);
+       .then(data =>{
+        //  console.log(req.body);
+         let result=data[0][city][schoolType];
+         console.log(JSON.stringify(result));
+         res.render("schoolsRender",{result});
      })
        }); 
   } catch {}
