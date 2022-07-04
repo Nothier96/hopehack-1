@@ -57,6 +57,9 @@ footer {
   grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   grid-gap: 2rem;
 }
+.logo {
+  height: 50px;
+}
 img {
   max-width: 100%;
 }

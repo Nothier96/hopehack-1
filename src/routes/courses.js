@@ -25,7 +25,7 @@ courseRouter.post("/", async (req, res) => {
   try {
     let duration = req.body.duration,
       order = req.body.order,
-      pricing = req.body,
+      pricing = req.body.price,
       course = req.body.course,
       language = req.body.language;
     const client_id = "oobVGja6bsRkU5qU1PWjcMnjEK0nIMfgBttT0V8V";
