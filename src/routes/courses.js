@@ -7,12 +7,23 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+courseRouter.get("/about", (req, res) => {
+  res.render("about");
+});
+courseRouter.get("/", (req, res) => {
+  res.render("index");
+});
+courseRouter.get("/contact", (req, res) => {
+  res.render("contact");
+});
+courseRouter.get("/schools", (req, res) => {
+  res.render("schools");
+});
+courseRouter.get("/third", (req, res) => {
+  res.render("thirdparty");
+});
+
 courseRouter.post("/", async (req, res) => {
-  //   console.log(req.body);
-  //   let duration = req.body.duration,
-  //     order = req.body.order,
-  //     pricing = req.body,
-  //     course = req.body.course;
   try {
     let duration = req.body.duration,
       order = req.body.order,
@@ -81,9 +92,7 @@ courseRouter.post("/", async (req, res) => {
 //     }
 //   }
 // });
-courseRouter.get("/third", (req, res) => {
-  res.render("thirdparty");
-});
+
 courseRouter.get("/", (req, res) => {
   res.render("thirdparty");
 });

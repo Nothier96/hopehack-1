@@ -30,36 +30,40 @@
         </nav>
     </header>
     <main>
-        <form style="text-align:center;" method="POST" action="/thirdAPI">
+        <form action="/" id="myForm" method="POST">
+            <label for="searchBox">Choose course</label>
             <input
-                type="text"
-                name="searchQuery"
-                id="searchBox"
-                placeholder="Enter Search Term"
-                required
+              type="text"
+              name="course"
+              id="searchBox"
+              placeholder="Enter Search Term"
+              required
             />
-            <label for="pricingOptions">Choose Pricing</label>
-                <select name="pricingQuery" id="pricingOptions">
-                    <option value="--">None</option>
-                    <option value="price-free">Free</option>
-                    <option value="price-paid">Paid</option>
-                </select>
-            <label for="SearchOrder">Sort By:</label>
-                <select name="searchOrderQuery" id="searchOrder">
-                    <option value="--">Default</option>
-                    <option value="relevance">Relevance</option>
-                    <option value="most-reviewed">Most Reviewed</option>
-                    <option value="highest-rated">Highest Rated</option>
-                    <option value="newest">Newest</option>
-                    <option value="price-low-to-high">Price Low to High</option>
-                    <option value="price-high-to-low">Price High to Low</option>
-                </select>
-            <input
-                type="submit"
-                id="submitButton"
-                value="Search"
-            />
-        </form>
+            <label for="pricingOptions">Pricing</label>
+            <select id="pricingOptions" name="price">
+              <option value="--"></option>
+              <option value="price-paid">Paid</option>
+              <option value="price-free">Free</option>
+            </select>
+            <select id="durationOptions" name="duration">
+              <option value="--">None</option>
+              <option value="short">Short</option>
+              <option value="long">Long</option>
+              <option value="medium">Medium</option>
+              <option value="extraLong">ExtraLong</option>
+            </select>
+            <label for="SearchOrder">Order by :</label>
+            <select id="searchOrder" name="order">
+              <option value="--">Default</option>
+              <option value="relevance">Relevance</option>
+              <option value="most-reviewed">Most Reviewed</option>
+              <option value="highest-rated">Highest Rated</option>
+              <option value="newest">Newest</option>
+              <option value="price-low-to-high">Price Low To High</option>
+              <option value="price-high-to-low">Price High To Low</option>
+            </select>
+            <input type="submit" id="submitButton" value="submit" />
+          </form>
         <article id="thirdAPIArticle" style="display:none">
             
         </article>
