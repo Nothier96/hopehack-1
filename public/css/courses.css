@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #aa7dce;
+  background-color: white;
 }
 nav {
   width: 100%;
@@ -46,7 +46,7 @@ footer {
 .wrapper .courses .course_card {
   text-decoration: none;
   color: black;
-  background-color: white;
+  background-color: aliceblue;
   padding: 10px;
 }
 .wrapper .courses .course_card:hover {
@@ -62,4 +62,25 @@ footer {
 }
 img {
   max-width: 100%;
+}
+.course form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 2rem;
+  font-size: 30px;
+}
+.course form p {
+  padding: 2rem;
+}
+.course form p select {
+  width: 200px;
+  font-size: 30px;
+}
+.course form p input {
+  width: 200px;
+  font-size: 30px;
+}
+.course form p input {
+  width: 200px;
 }

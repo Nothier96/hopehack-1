@@ -5,11 +5,14 @@ const axios = require("axios");
 
 courseRouter.use(bodyParser.json());
 courseRouter.use(bodyParser.urlencoded({ extended: true }));
+courseRouter.get("/", (req, res) => {
+  res.render("index");
+});
 courseRouter.get("/about", (req, res) => {
   res.render("about");
 });
-courseRouter.get("/", (req, res) => {
-  res.render("index");
+courseRouter.get("/courses", (req, res) => {
+  res.render("courses");
 });
 courseRouter.get("/contact", (req, res) => {
   res.render("contact");

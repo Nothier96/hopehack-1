@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/courses.css" />
 </head>
 <body>
     <header>
@@ -29,36 +29,37 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <section class="course">
         <form action="/" id="myForm" method="POST">
-            <label for="searchBox">Choose course</label>
+         <p>  <label for="searchBox">Course</label>
             <input
               type="text"
               name="course"
               id="searchBox"
-              placeholder="Enter Search Term"
+              placeholder=""
               required
-            />
-            <label for="pricingOptions">Pricing</label>
+            /></p> 
+            <p>   <label for="pricingOptions">Pricing</label>
             <select id="pricingOptions" name="price">
               <option value="--"></option>
               <option value="price-paid">Paid</option>
               <option value="price-free">Free</option>
-            </select>
-            <label for="language">language</label>
+            </select></p> 
+            <p>     <label for="language">language</label>
             <select id="language" name="language">
                 <option value="--"></option>
                 <option value="en">English</option>
                 <option value="fr">French</option>
-              </select>
-            <select id="durationOptions" name="duration">
+              </select></p> 
+              <p>    <label for="durationOptions">duration</label>
+                   <select id="durationOptions" name="duration">
               <option value="--">None</option>
               <option value="short">Short</option>
               <option value="long">Long</option>
               <option value="medium">Medium</option>
               <option value="extraLong">ExtraLong</option>
-            </select>
-            <label for="SearchOrder">Order by :</label>
+            </select></p> 
+            <p>      <label for="SearchOrder">Order by :</label>
             <select id="searchOrder" name="order">
               <option value="--">Default</option>
               <option value="relevance">Relevance</option>
@@ -67,13 +68,10 @@
               <option value="newest">Newest</option>
               <option value="price-low-to-high">Price Low To High</option>
               <option value="price-high-to-low">Price High To Low</option>
-            </select>
-            <input type="submit" id="submitButton" value="submit" />
+            </select></p> 
+            <button> Submit</button>
           </form>
-        <article id="thirdAPIArticle" style="display:none">
-            
-        </article>
-    </main>
+    </section>
     <footer>
         <p>Copyright &copy; 2022 | Hope Hacks Group</p>
         <a href="https://www.facebook.com/%22%3E
@@ -89,6 +87,5 @@
              <img class="logo" src="/img/twitter.png" alt="twitter-logo">
         </a>
     </footer>
-    <script src="/js/slideshow.js"></script>
 </body>
 </html>
