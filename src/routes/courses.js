@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const courseRouter = express.Router();
 const axios = require("axios");
-const { acceptsLanguage } = require("express/lib/request");
 
 courseRouter.use(bodyParser.json());
 courseRouter.use(bodyParser.urlencoded({ extended: true }));
