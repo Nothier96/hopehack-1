@@ -52,6 +52,22 @@
             value="Search"
         />
     </form>
+    <div class="wrapper">
+        <div class="courses">
+          <% if( result != null){ %> 
+           <% Object.keys(result).forEach(function(num){ %>
+          <a
+            href="<%-result[num].url%>"
+            class="course_card"
+            target="_blank"
+          >
+            <p><%-result[num].school %></p>
+          </a>
+          <% }) %> <% } else {%>
+          <div class="error">No Schools Found</div>
+          <%} %>
+        </div>
+      </div>
 </main>
     <footer>
         <p>Copyright &copy; 2022 | Hope Hacks Group</p>
