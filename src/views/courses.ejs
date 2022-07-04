@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/courses.css" />
   </head>
   <body>
     <header>
@@ -45,6 +45,12 @@
         <option value="price-paid">Paid</option>
         <option value="price-free">Free</option>
       </select>
+      <label for="language">language</label>
+      <select id="language" name="language">
+        <option value="--"></option>
+        <option value="en">English</option>
+        <option value="fr">French</option>
+      </select>
       <select id="durationOptions" name="duration">
         <option value="--">None</option>
         <option value="short">Short</option>
@@ -68,33 +74,41 @@
     <!-- <h1>Courses Details</h1> -->
     <div class="wrapper">
       <div class="courses">
-        <% Object.keys(courseDetail).forEach(function(course){ %>
+        <% if( courseDetail != null){ %> <%
+        Object.keys(courseDetail).forEach(function(course){ %>
 
-        <a href="" class="course_card">
-          <!-- <img src="<%%>" alt="" /> -->
+        <a
+          href="https://www.udemy.com<%-courseDetail[course].url%>"
+          class="course_card"
+          target="_blank"
+        >
           <img
-            src=" <%- courseDetail[course].visible_instructors[0].image_100x100 %> "
-            alt=""
+            src=" <%- courseDetail[course].visible_instructors[0].image_100x100%> "
+            alt="<%-courseDetail[course].title %></"
           />
+          <p><%-courseDetail[course].visible_instructors[0].display_name%></p>
           <h2><%-courseDetail[course].title %></h2>
-          <%-courseDetail[course].id%> <%-courseDetail[course].price%>
-          <%-courseDetail[course].price_detail.currency%>
-          <%-courseDetail[course].is_paid%>
-          <%-courseDetail[course].visible_instructors[0].title%>
+          <p><%-courseDetail[course].price%></p>
         </a>
-        <% }) %>
+        <% }) %> <% } else {%>
+        <div class="error">No Course Found</div>
+        <%} %>
       </div>
     </div>
-    <!-- <% courseDetail %> -->
+    <footer>
+      <p>Copyright &copy; 2022 | ThinkHub</p>
+      <a href="https://www.facebook.com/">
+        <img class="logo" src="/img/facebook.png" alt="facebook-logo" />
+      </a>
+      <a href="https://www.linkedin.com/">
+        <img class="logo" src="/img/linkedin.png" alt="linkedin-logo" />
+      </a>
+      <a href="https://www.instagram.com/">
+        <img class="logo" src="/img/instagram.png" alt="instagram-logo" />
+      </a>
+      <a href="https://twitter.com/">
+        <img class="logo" src="/img/twitter.png" alt="twitter-logo" />
+      </a>
+    </footer>
   </body>
-  <!-- <script>
-    const myForm = document.getElementById("myForm");
-    myForm.addEventListener("submit", (e) => {
-      // prevent page from fading away
-      e.preventDefault();
-
-      const formData = new FormData(this);
-      fetch(server.js);
-    });
-  </script> -->
 </html>
