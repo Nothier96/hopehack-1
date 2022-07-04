@@ -1,7 +1,11 @@
 html {
   overflow-x: hidden;
+  width:100%;
 }
-
+body{
+  width:100%;
+  margin:0;
+}
 nav {
   width: 100%;
   background-color: #3b429f;
@@ -161,3 +165,10 @@ main {
   color: #cccc00;
 }
 /*# sourceMappingURL=style.css.map */
+#contact-form{
+  display:flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin:auto;
+  padding:1rem;
+}
