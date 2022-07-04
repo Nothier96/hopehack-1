@@ -84,3 +84,17 @@ img {
 .course form p input {
   width: 200px;
 }
+.form-submit-button {
+  background: #0066a2;
+  color: white;
+  border-style: outset;
+  border-color: #0066a2;
+  height: 30px;
+  width: 200px;
+  font: bold15px arial, sans-serif;
+  text-shadow: none;
+}
+
+.logo {
+  height: 50px;
+}
