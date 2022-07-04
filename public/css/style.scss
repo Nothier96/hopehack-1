@@ -117,8 +117,9 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-gap: 2rem;
+
+}
 =======
 #cityOption:focus{
   outline:none;
@@ -135,4 +136,18 @@ body {
   border:rgb(204, 204, 0) solid 1px;
   border-radius: 5px;
   color: rgb(204, 204, 0);
+}
+
+.wrapper .courses .course_card img {
+  max-width: 100%;
+}
+.wrapper {
+  padding: 1rem;
+}
+.courses {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2rem;
+
 }

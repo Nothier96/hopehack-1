@@ -68,12 +68,12 @@
     <!-- <h1>Courses Details</h1> -->
     <div class="wrapper">
       <div class="courses">
-        <% Object.keys(courseDetail).forEach(function(course){ %>
+        <% if( courseDetail !== null){ %> <%
+        Object.keys(courseDetail).forEach(function(course){ %>
 
         <a href="" class="course_card">
-          <!-- <img src="<%%>" alt="" /> -->
           <img
-            src=" <%- courseDetail[course].visible_instructors[0].image_100x100 %> "
+            src=" <%- courseDetail[course].visible_instructors[0].image_100x100%> "
             alt=""
           />
           <h2><%-courseDetail[course].title %></h2>
@@ -82,19 +82,8 @@
           <%-courseDetail[course].is_paid%>
           <%-courseDetail[course].visible_instructors[0].title%>
         </a>
-        <% }) %>
+        <% }) %> <% } %>
       </div>
     </div>
-    <!-- <% courseDetail %> -->
   </body>
-  <!-- <script>
-    const myForm = document.getElementById("myForm");
-    myForm.addEventListener("submit", (e) => {
-      // prevent page from fading away
-      e.preventDefault();
-
-      const formData = new FormData(this);
-      fetch(server.js);
-    });
-  </script> -->
 </html>
