@@ -2,6 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const courseRouter = express.Router();
 const axios = require("axios");
+const connection= 'mongodb+srv://taigatop:MuzvoMZhYmXLSgTH@cluster0.qat9t7x.mongodb.net/?retryWrites=true&w=majority'
+const MongoClient=require('mongodb').MongoClient;
+
 
 courseRouter.use(bodyParser.json());
 courseRouter.use(bodyParser.urlencoded({ extended: true }));
@@ -19,6 +22,22 @@ courseRouter.get("/schools", (req, res) => {
 });
 courseRouter.get("/third", (req, res) => {
   res.render("thirdparty");
+});
+
+courseRouter.post("/firstAPI", (req,res)=>{
+ try{
+  MongoClient.connect(connection,{ useUnifiedTopology: true })
+  .then(client =>{
+      console.log('Connected to Database');
+      const db=client.db('schoolDB');
+      const schoolData = db.collection('schools');
+      schoolData.find().toArray()
+      .then(result =>{
+        console.log(req.body);
+        console.log(result);
+    })
+      }); 
+ } catch {}
 });
 
 courseRouter.post("/", async (req, res) => {
