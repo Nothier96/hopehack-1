@@ -68,7 +68,7 @@
     <!-- <h1>Courses Details</h1> -->
     <div class="wrapper">
       <div class="courses">
-        <% if( courseDetail !== null){ %> <%
+        <% if( courseDetail != null){ %> <%
         Object.keys(courseDetail).forEach(function(course){ %>
 
         <a href="" class="course_card">
@@ -82,7 +82,9 @@
           <%-courseDetail[course].is_paid%>
           <%-courseDetail[course].visible_instructors[0].title%>
         </a>
-        <% }) %> <% } %>
+        <% }) %> <% } else {%>
+        <div class="error">No Course Found</div>
+        <%} %>
       </div>
     </div>
     <footer>

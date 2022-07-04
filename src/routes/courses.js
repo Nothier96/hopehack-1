@@ -45,12 +45,16 @@ courseRouter.post("/", async (req, res) => {
     res.render("courses", { courseDetail: courseApi.data.results });
   } catch (err) {
     if (err.response) {
+      res.render("courses", { courseDetail: null });
       console.log(err.response.data);
       console.log(err.response.status);
       console.log(err.response.headers);
     } else if (err.request) {
+      res.render("courses", { courseDetail: null });
+
       console.log(err.request);
     } else {
+      res.render("courses", { courseDetail: null });
       console.log("Error", err.message);
     }
   }
