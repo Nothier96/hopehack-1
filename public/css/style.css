@@ -36,7 +36,9 @@ li a {
   border: solid 2px black;
   padding: 1rem;
 }
-
+nav ul{
+  margin-top:0;
+}
 li a:hover {
   color: #151515;
   background-color: #aa7dce;
@@ -171,4 +173,29 @@ main {
   max-width: 800px;
   margin:auto;
   padding:1rem;
+}
+.active{
+  background-color:#a8577e;
+}
+.people{
+  display:flex;
+  flex-direction: row;
+}
+
+.person{
+  width:calc(25%-3rem);
+}
+.person img{
+  width:100%;
+}
+.person:nth-child(1){
+  margin-right: 1rem;
+}
+
+.person:nth-child(2){
+  margin-right: 1rem;
+}
+
+.person:nth-child(3){
+  margin-right: 1rem;
 }
