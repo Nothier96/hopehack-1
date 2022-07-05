@@ -202,3 +202,31 @@ main {
 .aboutImg{
   object-fit: cover;
 }
+
+.schoolDiv{
+  font-size:1.5rem;
+}
+.schoolDiv a{
+  font-size:2rem;
+  background-color:#a8577e;
+}
+@media only screen and (max-width:600px){
+.people{
+  /* flex-direction: column; */
+  flex-wrap:wrap;
+}
+.person{
+  margin:auto;
+}
+.person img{
+  height:25vh;
+  width:auto;
+}
+form{
+  display:flex;
+  flex-direction:column;
+  width:50%;
+  margin:auto;
+}
+
+}

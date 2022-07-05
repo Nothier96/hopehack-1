@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>Document</title>
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
@@ -88,12 +89,12 @@
           <form id="contact-form">
             <input type="hidden" name="contact_number" />
             <label>Name</label>
-            <input type="text" name="user_name" />
+            <input type="text" name="user_name" required/>
             <label>Email</label>
-            <input type="email" name="user_email" />
+            <input type="email" name="user_email" required/>
             <label>Message</label>
-            <textarea name="message"></textarea>
-            <input type="submit" value="Send" />
+            <textarea name="message" required></textarea>
+            <input type="submit" value="Send" required/>
           </form>
         </section>
       </article>
