@@ -1,5 +1,6 @@
 # ThinkBeyond Inc.
 ![alt text](https://raw.githubusercontent.com/Nothier96/hopehack-1/main/public/img/favicon.png)
+
 ThinkBeyond is a fullstack application for the organization ThinkBeyond Inc. Website application featuring one third-party and one first-party API.
 
 ## Getting Started
@@ -13,10 +14,15 @@ On the command line tool, pressing ```control + c``` will stop the server.
 
 ## Built With
 Node.JS
+
 MongoDB
+
 EJS
+
 Axios
+
 Node-fetch
+
 SASS
 
 ## Creators
