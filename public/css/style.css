@@ -242,3 +242,8 @@ nav a{
   font-size: 1.2rem;
 }
 }
+.contentSection{
+  width:60%;
+  text-align: center;
+  margin:auto
+}
