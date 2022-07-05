@@ -31,20 +31,21 @@
     </header>
 
 <main>
+    <h2>Find a list of schools from our partner cities!</h2>
     <form style="text-align:center;" method="POST" action="/firstAPI">
         <label for="cityOption">Choose your City</label>
             <select name="cityQuery"id="cityOption" >
                 <option value="houston">Houston</option>
                 <option value="atlanta">Atlanta</option>
                 <option value="charlotte">Charlotte</option>
-                <option value="richmond">Richmons</option>
+                <option value="richmond">Richmond</option>
             </select>
         <label for="schoolType">Choose Schools Type</label>
             <select name="schoolType" id="schoolType">
                 <option value="elementarySchool">Elementary</option>
                 <option value="middleSchool">Middle</option>
                 <option value="highSchool">HighSchool</option>
-                <option value="college">University</option>
+                <option value="college">College</option>
             </select>
         <input
             type="submit"
@@ -54,18 +55,21 @@
     </form>
     <div class="wrapper">
         <div class="courses">
+            <ol>
           <% if( result != null){ %> 
            <% Object.keys(result).forEach(function(num){ %>
+            <li
+            <p><%-result[num].school %></p>
           <a
             href="<%-result[num].url%>"
             class="course_card"
             target="_blank"
-          >
-            <p><%-result[num].school %></p>
-          </a>
+          >Link</a>
+          </li>
           <% }) %> <% } else {%>
           <div class="error">No Schools Found</div>
           <%} %>
+        </ol>
         </div>
       </div>
 </main>
