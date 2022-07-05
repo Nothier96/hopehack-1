@@ -211,36 +211,45 @@ main {
   background-color:#a8577e;
 }
 @media only screen and (max-width:600px){
-.people{
-  /* flex-direction: column; */
-  flex-wrap:wrap;
+  .people{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+  }
+  .person{
+    margin:auto auto 0 auto;
+    /* margin:auto; */
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+.person:nth-child(2){
+  margin-right: 0rem;
 }
-.person{
-  margin:auto;
-}
-.person img{
-  height:25vh;
-  width:auto;
-}
-form{
-  display:flex;
-  flex-direction:column;
-  width:50%;
-  margin:auto;
-}
-nav{
-  width:100%;
-}
-nav ul{
-  padding:0;
-}
-nav li{
-  margin:0;
-  /* padding:0; */
-}
-nav a{
-  font-size: 1.2rem;
-}
+
+  form{
+    display:flex;
+    flex-direction:column;
+    width:50%;
+    margin:auto;
+  }
+  nav{
+    width:100%;
+  }
+  nav ul{
+    padding:0;
+  }
+  nav li{
+    margin:0;
+    /* padding:0; */
+  }
+  nav a{
+    font-size: 1.2rem;
+  }
 }
 .contentSection{
   width:60%;
