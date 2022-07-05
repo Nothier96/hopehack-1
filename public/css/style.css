@@ -1,10 +1,11 @@
 html {
   overflow-x: hidden;
-  width:100%;
+  width: 100%;
 }
-body{
-  width:100%;
-  margin:0;
+body {
+  width: 100%;
+  margin: 0;
+  background-image: url("/Users/thiernosissoko/hopehack-1/public/img/tim-mossholder-WE_Kv_ZB1l0-unsplash.jpg");
 }
 nav {
   width: 100%;
@@ -17,12 +18,12 @@ ul {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   list-style: none;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 li {
@@ -36,8 +37,8 @@ li a {
   border: solid 2px black;
   padding: 1rem;
 }
-nav ul{
-  margin-top:0;
+nav ul {
+  margin-top: 0;
 }
 li a:hover {
   color: #151515;
@@ -67,11 +68,11 @@ main {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   margin: auto;
 }
 
@@ -83,7 +84,7 @@ main {
 #heroImage img {
   margin: auto;
   -webkit-filter: contrast(0.5);
-          filter: contrast(0.5);
+  filter: contrast(0.5);
   width: clamp(400px, 100vw, 800px);
 }
 
@@ -93,7 +94,7 @@ main {
   top: 62%;
   left: 50%;
   -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  transform: translate(-50%);
   padding: 1rem;
   color: #f7f7ff;
   text-shadow: 1px 2px #151515;
@@ -117,9 +118,9 @@ main {
 
 .fade {
   -webkit-animation-name: fade;
-          animation-name: fade;
+  animation-name: fade;
   -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
+  animation-duration: 2.5s;
 }
 
 @-webkit-keyframes fade {
@@ -167,78 +168,78 @@ main {
   color: #cccc00;
 }
 /*# sourceMappingURL=style.css.map */
-#contact-form{
-  display:flex;
+#contact-form {
+  display: flex;
   flex-direction: column;
   max-width: 800px;
-  margin:auto;
-  padding:1rem;
+  margin: auto;
+  padding: 1rem;
 }
-.active{
-  background-color:#a8577e;
+.active {
+  background-color: #a8577e;
 }
-.people{
-  display:flex;
+.people {
+  display: flex;
   flex-direction: row;
 }
 
-.person{
-  width:calc(25%-3rem);
+.person {
+  width: calc(25%-3rem);
 }
-.person img{
-  width:100%;
+.person img {
+  width: 100%;
 }
-.person:nth-child(1){
+.person:nth-child(1) {
   margin-right: 1rem;
 }
 
-.person:nth-child(2){
+.person:nth-child(2) {
   margin-right: 1rem;
 }
 
-.person:nth-child(3){
+.person:nth-child(3) {
   margin-right: 1rem;
 }
-.aboutImg{
+.aboutImg {
   object-fit: cover;
 }
 
-.schoolDiv{
-  font-size:1.5rem;
+.schoolDiv {
+  font-size: 1.5rem;
 }
-.schoolDiv a{
-  font-size:2rem;
-  background-color:#a8577e;
+.schoolDiv a {
+  font-size: 2rem;
+  background-color: #a8577e;
 }
-@media only screen and (max-width:600px){
-.people{
-  /* flex-direction: column; */
-  flex-wrap:wrap;
-}
-.person{
-  margin:auto;
-}
-.person img{
-  height:25vh;
-  width:auto;
-}
-form{
-  display:flex;
-  flex-direction:column;
-  width:50%;
-  margin:auto;
-}
-nav{
-  width:100%;
-}
-nav ul{
-  padding:0;
-}
-nav li{
-  margin:0;
-  /* padding:0; */
-}
-nav a{
-  font-size: 1.2rem;
-}
+@media only screen and (max-width: 600px) {
+  .people {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+  .person {
+    margin: auto;
+  }
+  .person img {
+    height: 25vh;
+    width: auto;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+  }
+  nav {
+    width: 100%;
+  }
+  nav ul {
+    padding: 0;
+  }
+  nav li {
+    margin: 0;
+    /* padding:0; */
+  }
+  nav a {
+    font-size: 1.2rem;
+  }
 }
