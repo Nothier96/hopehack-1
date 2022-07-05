@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
-    <title>Document</title>
+    <title>Contact</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
@@ -54,37 +55,56 @@
               <a href="/about">About</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <a class="active" href="/contact">Contact</a>
             </li>
           </ul>
         </nav>
       </header>
     <main>
-      <form id="contact-form">
-        <input type="hidden" name="contact_number" />
-        <label>Name</label>
-        <input type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message"></textarea>
-        <input type="submit" value="Send" />
-      </form>
+      <article>
+        <section id="contactSection">
+          <article id="heroImage">
+            <figure>
+              <img
+                class="fade slides aboutImg"
+                src="/img/slideshow/books.jpg"
+                alt="classroom of children"
+              />
+              <img
+                class="fade slides aboutImg"
+                src="/img/slideshow/books2.jpg"
+                alt="classroom of young adults"
+              />
+              <img
+                class="fade slides aboutImg"
+                src="/img/slideshow/books3.jpg"
+                alt="classroom of children"
+              />
+              <section id="heroText">
+                <h2>Welcome to our Contact Page</h2>
+                <a href="#contact-form">Contact us!</a>
+              </section>
+            </figure>
+          </article>
+          <form id="contact-form">
+            <input type="hidden" name="contact_number" />
+            <label>Name</label>
+            <input type="text" name="user_name" required/>
+            <label>Email</label>
+            <input type="email" name="user_email" required/>
+            <label>Message</label>
+            <textarea name="message" required></textarea>
+            <input type="submit" value="Send" required/>
+          </form>
+        </section>
+      </article>
     </main>
       <footer>
-        <p>Copyright &copy; 2022 | Hope Hacks Group</p>
-        <a href="https://www.facebook.com/">
-          <img class="logo" src="/img/facebook.png" alt="facebook-logo" />
-        </a>
-        <a href="https://www.linkedin.com/">
-          <img class="logo" src="/img/LinkedIn.png" alt="linkedin-logo" />
-        </a>
-        <a href="https://www.instagram.com/">
-          <img class="logo" src="/img/instagram.png" alt="instagram-logo" />
-        </a>
-        <a href="https://twitter.com/">
-          <img class="logo" src="/img/twitter.png" alt="twitter-logo" />
-        </a>
+        <p>Copyright &copy; 2022 | ThinkBeyond Inc.</p>
+        <a href="https://www.facebook.com/"><img class="logo" src="/img/facebook.png"alt="facebook-logo"></a>
+        <a href="https://www.linkedin.com/"><img class="logo" src="/img/linkedin.png" alt="linkedin-logo"></a>
+        <a href="https://www.instagram.com/"><img class="logo" src="/img/instagram.png" alt="instagram-logo"></a>
+        <a href="https://twitter.com/"><img class="logo" src="/img/twitter.png" alt="twitter-logo"></a>
       </footer>
     <script src="/js/slideshow.js"></script>
   </body>

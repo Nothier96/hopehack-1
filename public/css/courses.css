@@ -94,3 +94,14 @@ img {
   font: bold15px arial, sans-serif;
   text-shadow: none;
 }
+
+@media only screen and (max-width:600px){
+  body{
+    overflow-x:hidden;
+  }
+  #myForm{
+    font-size:1rem;
+    display:flex;
+    flex-direction: column;
+  }
+}
