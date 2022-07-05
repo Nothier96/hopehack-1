@@ -88,7 +88,7 @@ courseRouter.post("/", async (req, res) => {
     const courseApi = await axios.get(
       // `https://www.udemy.com/api-2.0/courses/?duration=${duration}&ordering=${order}&page=2&page_size=12&price=${pricing}&search=${course}&language=${language}`,
       // `https://www.udemy.com/api-2.0/courses/&search=${course}?duration=${duration}&ordering=${order}&page=2&page_size=12&price=${pricing}&language=${language}`,
-      `https://www.udemy.com/api-2.0/courses/?search=${course}${duration}${order}${pricing}${language}`,
+      `https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=${course}${duration}${order}${pricing}${language}`,
       {
         headers: {
           Authorization: `Basic ${client}`,
