@@ -27,7 +27,7 @@
             // these IDs from the previous steps
             emailjs.sendForm("contact_service", "contact_form", this).then(
               function () {
-                console.log("SUCCESS!");
+                alert("Message sent!");
               },
               function (error) {
                 console.log("FAILED...", error);
