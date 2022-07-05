@@ -5,13 +5,19 @@ html {
 body {
   width: 100%;
   margin: 0;
+  /* color: #fff; */
+  /* background-color: #B5BAD0; */
+  font-family: Helvetica, sans-serif;
   background-image: url("/Users/thiernosissoko/hopehack-1/public/img/tim-mossholder-WE_Kv_ZB1l0-unsplash.jpg");
 }
 nav {
   width: 100%;
-  background-color: #3b429f;
+  background-color: #7389AE;
 }
-
+nav img{
+margin: 0;
+max-height: 50px;
+}
 ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,19 +48,26 @@ nav ul {
 }
 li a:hover {
   color: #151515;
-  background-color: #aa7dce;
+  background-color: #416788;
 }
 
 li a:active {
-  background-color: #a8577e;
+  background-color: #5A789B;
 }
 
 footer {
+  bottom: ;
   margin: 0;
   width: 100%;
   text-align: center;
+  color: #fff;
+  background-color: #7389AE;
 }
+.aboutUs{
+  display: flex;
 
+}
+.meetUS
 main {
   text-align: center;
   min-height: calc(100vh - 190.6px);
@@ -105,7 +118,7 @@ main {
 }
 
 #heroText a {
-  background: #a8577e;
+  background: #5A789B;
   color: #f7f7ff;
   text-decoration: none;
   padding: 1rem;
@@ -176,7 +189,7 @@ main {
   padding: 1rem;
 }
 .active {
-  background-color: #a8577e;
+  background-color: #5A789B;
 }
 .people {
   display: flex;
@@ -209,7 +222,7 @@ main {
 }
 .schoolDiv a {
   font-size: 2rem;
-  background-color: #a8577e;
+  background-color: #5A789B;
 }
 @media only screen and (max-width: 600px) {
   .people {
@@ -243,11 +256,8 @@ main {
     font-size: 1.2rem;
   }
 }
-
-}
 .contentSection{
   width:60%;
   text-align: center;
   margin:auto
 }
-
