@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Schools</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -31,20 +32,21 @@
     </header>
 
 <main>
+    <h2>Find a list of schools from our partner cities!</h2>
     <form style="text-align:center;" method="POST" action="/firstAPI">
         <label for="cityOption">Choose your City</label>
             <select name="cityQuery"id="cityOption" >
                 <option value="houston">Houston</option>
                 <option value="atlanta">Atlanta</option>
                 <option value="charlotte">Charlotte</option>
-                <option value="richmond">Richmons</option>
+                <option value="richmond">Richmond</option>
             </select>
         <label for="schoolType">Choose Schools Type</label>
             <select name="schoolType" id="schoolType">
                 <option value="elementarySchool">Elementary</option>
                 <option value="middleSchool">Middle</option>
                 <option value="highSchool">HighSchool</option>
-                <option value="college">University</option>
+                <option value="college">College</option>
             </select>
         <input
             type="submit"
@@ -53,36 +55,31 @@
         />
     </form>
     <div class="wrapper">
-        <div class="courses">
+        <div class="schoolDiv">
+            <ol>
           <% if( result != null){ %> 
            <% Object.keys(result).forEach(function(num){ %>
+            <li
+            <p><%-result[num].school %></p>
           <a
             href="<%-result[num].url%>"
             class="course_card"
             target="_blank"
-          >
-            <p><%-result[num].school %></p>
-          </a>
+          >School Website</a>
+          </li>
           <% }) %> <% } else {%>
           <div class="error">No Schools Found</div>
           <%} %>
+        </ol>
         </div>
       </div>
 </main>
     <footer>
         <p>Copyright &copy; 2022 | ThinkBeyond Inc.</p>
-        <a href="https://www.facebook.com/">
-            <img class="logo" src="/img/facebook.png" alt="facebook-logo">
-        </a>
-        <a href="https://www.linkedin.com/">
-            <img class="logo" src="/img/LinkedIn.png" alt="linkedin-logo">
-        </a>
-        <a href="https://www.instagram.com/">
-            <img class="logo" src="/img/instagram.png" alt="instagram-logo">
-        </a>
-        <a href="https://twitter.com/">
-             <img class="logo" src="/img/twitter.png" alt="twitter-logo">
-        </a>
+        <a href="https://www.facebook.com/"><img class="logo" src="/img/facebook.png"alt="facebook-logo"></a>
+        <a href="https://www.linkedin.com/"><img class="logo" src="/img/linkedin.png" alt="linkedin-logo"></a>
+        <a href="https://www.instagram.com/"><img class="logo" src="/img/instagram.png" alt="instagram-logo"></a>
+        <a href="https://twitter.com/"><img class="logo" src="/img/twitter.png" alt="twitter-logo"></a>
     </footer>
     <script src="/js/slideshow.js"></script>
 </body>

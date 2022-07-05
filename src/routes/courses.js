@@ -29,7 +29,7 @@ courseRouter.post("/firstAPI", (req,res)=>{
   try{
    MongoClient.connect(connection,{ useUnifiedTopology: true })
    .then(client =>{
-       console.log('Connected to Database');
+      //  console.log('Connected to Database');
        const db=client.db('schoolDB');
        const schoolData = db.collection('schools');
        let city = req.body.cityQuery
