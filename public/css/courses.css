@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: white;
+  background-color: lightblue;
 }
 nav {
   width: 100%;
@@ -64,11 +64,14 @@ img {
   max-width: 100%;
 }
 .course form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 2rem;
   font-size: 30px;
+  margin-bottom: 200px;
 }
 .course form p {
   padding: 2rem;
@@ -91,17 +94,25 @@ img {
   border-color: #0066a2;
   height: 30px;
   width: 200px;
-  font: bold15px arial, sans-serif;
   text-shadow: none;
+  cursor: pointer;
 }
-
-@media only screen and (max-width:600px){
-  body{
-    overflow-x:hidden;
+.error {
+  font-size: 120px;
+  padding-left: 550px;
+}
+.courseform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
   }
-  #myForm{
-    font-size:1rem;
-    display:flex;
+  #myForm {
+    font-size: 1rem;
+    display: flex;
     flex-direction: column;
   }
 }
