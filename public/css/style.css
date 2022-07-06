@@ -7,12 +7,21 @@ body {
   margin: 0;
   background-image: url("/Users/thiernosissoko/hopehack-1/public/img/tim-mossholder-WE_Kv_ZB1l0-unsplash.jpg");
 }
-nav {
+.logo1 img {
+  width: 100px;
+}
+.navbar-expand-lg .navbar-collapse {
+  display: flex;
+  /* flex-basis: auto; */
+  flex-direction: row-reverse;
+  padding-right: 40px;
+}
+/* nav {
   width: 100%;
   background-color: #3b429f;
-}
+} */
 
-ul {
+/* ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,30 +33,30 @@ ul {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
+} */
+/* 
 li {
   margin: 1rem;
-}
-
+} */
+/* 
 li a {
   text-decoration: none;
   font-size: 1.5rem;
   color: #f7f7ff;
   border: solid 2px black;
   padding: 1rem;
-}
-nav ul {
+} */
+/* nav ul {
   margin-top: 0;
-}
-li a:hover {
+} */
+/* li a:hover {
   color: #151515;
   background-color: #aa7dce;
-}
+} */
 
-li a:active {
+/* li a:active {
   background-color: #a8577e;
-}
+} */
 
 footer {
   margin: 0;
@@ -204,57 +213,58 @@ main {
   object-fit: cover;
 }
 
-.schoolDiv{
-  font-size:1.5rem;
+.schoolDiv {
+  font-size: 1.5rem;
 }
-.schoolDiv a{
-  font-size:2rem;
-  background-color:#a8577e;
+.schoolDiv a {
+  font-size: 2rem;
+  background-color: #a8577e;
 }
-@media only screen and (max-width:600px){
-  .people{
+@media only screen and (max-width: 600px) {
+  .people {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 0px; 
+    grid-row-gap: 0px;
   }
-  .person{
-    margin:auto auto 0 auto;
+  .person {
+    margin: auto auto 0 auto;
     /* margin:auto; */
     text-align: center;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
   }
-  
-.person:nth-child(2){
-  margin-right: 0rem;
-}
 
-  form{
-    display:flex;
-    flex-direction:column;
-    width:50%;
-    margin:auto;
+  .person:nth-child(2) {
+    margin-right: 0rem;
   }
-  nav{
-    width:100%;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
   }
-  nav ul{
-    padding:0;
-  }
-  nav li{
-    margin:0;
+  /* nav {
+    width: 100%;
+  } */
+  /* nav ul {
+    padding: 0;
+  } */
+  /* nav li {
+    margin: 0;
     /* padding:0; */
-  }
-  nav a{
+}
+/* nav a {
     font-size: 1.2rem;
-  }
-}
-.contentSection{
-  width:60%;
-  text-align: center;
-  margin:auto
-}
+  } */
 
+.contentSection {
+  width: 60%;
+  text-align: center;
+  margin: auto;
+}
+/* .logo1 {
+} */
