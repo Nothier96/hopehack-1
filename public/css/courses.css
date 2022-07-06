@@ -4,11 +4,12 @@
   box-sizing: border-box;
 }
 body {
-  background-color: lightblue;
+  background-color: #B5BAD0;
+  font-family: Helvetica, sans-serif;
 }
 nav {
   width: 100%;
-  background-color: #3b429f;
+  background-color: #7389AE;
 }
 
 ul {
@@ -30,10 +31,10 @@ li a {
 }
 li a:hover {
   color: #151515;
-  background-color: #aa7dce;
+  background-color: #416788;
 }
 li a:active {
-  background-color: #a8577e;
+  background-color: #5A789B;
 }
 footer {
   margin: 0;
@@ -88,10 +89,10 @@ img {
   width: 200px;
 }
 .form-submit-button {
-  background: #0066a2;
+  background: #416788;
   color: white;
   border-style: outset;
-  border-color: #0066a2;
+  border-color: #416788;
   height: 30px;
   width: 200px;
   text-shadow: none;
@@ -105,6 +106,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+footer {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: #7389AE;
 }
 @media only screen and (max-width: 600px) {
   body {
