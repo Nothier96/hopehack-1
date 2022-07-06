@@ -49,7 +49,97 @@ courseRouter.post("/firstAPI", (req, res) => {
       }
     );
   } catch {}
-});
+ });
+ courseRouter.get("/calendar", (req,res)=>{
+  try{
+   MongoClient.connect(connection,{ useUnifiedTopology: true })
+   .then(client =>{
+      //  console.log('Connected to Database');
+       const db=client.db('loginHOPE');
+       const calendar = db.collection('calendar');
+
+      calendar.find().toArray()
+       .then(result=>{
+        //  console.log(result);
+        //  let result=data[0][city][schoolType];
+        //  console.log(JSON.stringify(result));
+        // if(resultPost.user==)
+         res.render('calendar',{result});
+     })
+       }); 
+  } catch {}
+ });
+ courseRouter.post("/calendarACC", (req,res)=>{
+  try{
+   MongoClient.connect(connection,{ useUnifiedTopology: true })
+   .then(client =>{
+      //  console.log('Connected to Database');
+       const db=client.db('loginHOPE');
+       const calendarAcc = db.collection('account');
+       let acc = req.body.account;
+      let pass=req.body.password;
+
+      let accEntry= { user: `${acc}`, password:`${pass}`};
+      calendarAcc.find().toArray()
+       .then(resultPost=>{
+
+         console.log(resultPost[0]);
+        //  let result=data[0][city][schoolType];
+        //  console.log(JSON.stringify(result));
+        if(resultPost[0].user==accEntry.user && resultPost[0].password===accEntry.password){
+         res.redirect('calendarAdmin');
+        }
+        else{
+          res.redirect('calendar');
+        }
+        // else{
+        // alert("Username and password not found");
+        // }
+     })
+       }); 
+  } catch (err) { res.redirect('calendar'); }
+ });
+ courseRouter.get("/calendarAdmin", (req,res)=>{
+  try{
+   MongoClient.connect(connection,{ useUnifiedTopology: true })
+   .then(client =>{
+      //  console.log('Connected to Database');
+       const db=client.db('loginHOPE');
+       const calendar = db.collection('calendar');
+
+      calendar.find().toArray()
+       .then(result=>{
+         console.log(result);
+        //  let result=data[0][city][schoolType];
+        //  console.log(JSON.stringify(result));
+        // if(resultPost.user==)
+         res.render('calendarAdmin',{result});
+     })
+       }); 
+  } catch {}
+ });
+
+ courseRouter.post("/calendarPOST", (req,res)=>{
+  try{
+   MongoClient.connect(connection,{ useUnifiedTopology: true })
+   .then(client =>{
+      //  console.log('Connected to Database');
+       const db=client.db('loginHOPE');
+       const thinkCalendar = db.collection('calendar');
+       let event = req.body.eventName
+      let eventDate=req.body.date;
+
+      let dataEntry= { event: `${event}`, date:`${eventDate}`};
+      thinkCalendar.insertOne(dataEntry)
+       .then(resultPost=>{
+        //  console.log(req.body);
+        //  let result=data[0][city][schoolType];
+        //  console.log(JSON.stringify(result));
+         res.redirect('/calendarAdmin');
+     })
+       }); 
+  } catch {}
+ });
 
 courseRouter.post("/", async (req, res) => {
   try {

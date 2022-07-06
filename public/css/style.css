@@ -7,6 +7,7 @@ body {
   margin: 0;
   color: black; 
    background-color: #B5BAD0;
+
   font-family: Helvetica, sans-serif;
  
 }
@@ -281,4 +282,16 @@ main {
   width:60%;
   text-align: center;
   margin:auto
+}
+ol{
+  text-align: center;
+  margin:auto;
+
+  position: absolute;
+  left: 50%;
+
+  transform:translate(-50%);
+}
+.calendar p{
+  text-align: left;
 }
