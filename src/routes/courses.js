@@ -2,9 +2,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const courseRouter = express.Router();
 const axios = require("axios");
-const e = require("express");
-const connection= 'mongodb+srv://taigatop:MuzvoMZhYmXLSgTH@cluster0.qat9t7x.mongodb.net/?retryWrites=true&w=majority'
-const MongoClient=require('mongodb').MongoClient;
+const connection =
+  "mongodb+srv://taigatop:MuzvoMZhYmXLSgTH@cluster0.qat9t7x.mongodb.net/?retryWrites=true&w=majority";
+const MongoClient = require("mongodb").MongoClient;
 
 courseRouter.use(bodyParser.json());
 courseRouter.use(bodyParser.urlencoded({ extended: true }));
@@ -26,25 +26,28 @@ courseRouter.get("/schools", (req, res) => {
 courseRouter.get("/third", (req, res) => {
   res.render("thirdparty");
 });
-courseRouter.post("/firstAPI", (req,res)=>{
-  try{
-   MongoClient.connect(connection,{ useUnifiedTopology: true })
-   .then(client =>{
-      //  console.log('Connected to Database');
-       const db=client.db('schoolDB');
-       const schoolData = db.collection('schools');
-       let city = req.body.cityQuery
-      let schoolType=req.body.schoolType
-      var arrayNum=0; 
- 
-       schoolData.find().toArray()
-       .then(data =>{
-        //  console.log(req.body);
-         let result=data[0][city][schoolType];
-        //  console.log(JSON.stringify(result));
-         res.render("schoolsRender",{result});
-     })
-       }); 
+courseRouter.post("/firstAPI", (req, res) => {
+  try {
+    MongoClient.connect(connection, { useUnifiedTopology: true }).then(
+      (client) => {
+        //  console.log('Connected to Database');
+        const db = client.db("schoolDB");
+        const schoolData = db.collection("schools");
+        let city = req.body.cityQuery;
+        let schoolType = req.body.schoolType;
+        var arrayNum = 0;
+
+        schoolData
+          .find()
+          .toArray()
+          .then((data) => {
+            //  console.log(req.body);
+            let result = data[0][city][schoolType];
+            //  console.log(JSON.stringify(result));
+            res.render("schoolsRender", { result });
+          });
+      }
+    );
   } catch {}
  });
  courseRouter.get("/calendar", (req,res)=>{
@@ -145,30 +148,26 @@ courseRouter.post("/", async (req, res) => {
       pricing = req.body.price,
       course = req.body.course,
       language = req.body.language;
-      if(language==="--"){
-        language='';
-      }
-      else{
-        language=`&language=${language}`
-      }
-      if(duration==="--"){
-        duration='';
-      }
-      else{
-        duration=`&duration=${duration}`
-      }
-      if(order==='--'){
-        order='';
-      }
-      else{
-        order=`&ordering=${order}`;
-      }
-      if(pricing==='--'){
-        pricing='';
-      }
-      else{
-        pricing=`&price=${pricing}`
-      }
+    if (language === "--") {
+      language = "";
+    } else {
+      language = `&language=${language}`;
+    }
+    if (duration === "--") {
+      duration = "";
+    } else {
+      duration = `&duration=${duration}`;
+    }
+    if (order === "--") {
+      order = "";
+    } else {
+      order = `&ordering=${order}`;
+    }
+    if (pricing === "--") {
+      pricing = "";
+    } else {
+      pricing = `&price=${pricing}`;
+    }
 
     const client_id = "oobVGja6bsRkU5qU1PWjcMnjEK0nIMfgBttT0V8V";
     const client_secret =
@@ -179,7 +178,7 @@ courseRouter.post("/", async (req, res) => {
     const courseApi = await axios.get(
       // `https://www.udemy.com/api-2.0/courses/?duration=${duration}&ordering=${order}&page=2&page_size=12&price=${pricing}&search=${course}&language=${language}`,
       // `https://www.udemy.com/api-2.0/courses/&search=${course}?duration=${duration}&ordering=${order}&page=2&page_size=12&price=${pricing}&language=${language}`,
-      `https://www.udemy.com/api-2.0/courses/?search=${course}${duration}${order}${pricing}${language}`,
+      `https://www.udemy.com/api-2.0/courses/?page=2&page_size=12&search=${course}${duration}${order}${pricing}${language}`,
       {
         headers: {
           Authorization: `Basic ${client}`,
@@ -187,7 +186,12 @@ courseRouter.post("/", async (req, res) => {
       }
     );
     // console.log(courseApi.data);
-    res.render("courses", { courseDetail: courseApi.data.results });
+    console.log();
+    if (courseApi.data.count != 0) {
+      res.render("courses", { courseDetail: courseApi.data.results });
+    } else {
+      throw err;
+    }
   } catch (err) {
     if (err.response) {
       res.render("courses", { courseDetail: null });
@@ -196,7 +200,6 @@ courseRouter.post("/", async (req, res) => {
       console.log(err.response.headers);
     } else if (err.request) {
       res.render("courses", { courseDetail: null });
-
       console.log(err.request);
     } else {
       res.render("courses", { courseDetail: null });
