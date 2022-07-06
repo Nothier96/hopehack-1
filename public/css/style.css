@@ -5,6 +5,8 @@ html {
 body{
   width:100%;
   margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #B5BAD0;
 }
 nav {
   width: 100%;
@@ -255,4 +257,16 @@ main {
   width:60%;
   text-align: center;
   margin:auto
+}
+ol{
+  text-align: center;
+  margin:auto;
+
+  position: absolute;
+  left: 50%;
+
+  transform:translate(-50%);
+}
+.calendar p{
+  text-align: left;
 }
