@@ -7,27 +7,29 @@ body {
   background-color: #B5BAD0;
   font-family: Helvetica, sans-serif;
 }
-nav {
+/* nav {
   width: 100%;
   background-color: #7389AE;
-}
+} */
 
-ul {
+
+/* ul {
   display: flex;
   flex-direction: row;
   list-style: none;
   justify-content: center;
-}
-li {
+} */
+/* li {
   margin: 1rem;
-}
+} */
 
-li a {
+/* li a {
   text-decoration: none;
   font-size: 1.5rem;
   color: #f7f7ff;
   border: solid 2px black;
   padding: 1rem;
+
 }
 li a:hover {
   color: #151515;
@@ -36,6 +38,9 @@ li a:hover {
 li a:active {
   background-color: #5A789B;
 }
+
+
+
 footer {
   margin: 0;
   width: 100%;
@@ -89,11 +94,11 @@ img {
   width: 200px;
 }
 .form-submit-button {
-  background: #416788;
+  background: black;
   color: white;
   border-style: outset;
-  border-color: #416788;
-  height: 30px;
+  height: 60px;
+
   width: 200px;
   text-shadow: none;
   cursor: pointer;
@@ -124,3 +129,23 @@ footer {
     flex-direction: column;
   }
 }
+.logo1 {
+  width: 100px;
+}
+.navbar-expand-lg .navbar-collapse {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-right: 40px;
+}
+/* .navbar-expand-lg .navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+  flex-direction: row-reverse;
+  padding-right: 40px;
+} */
+/* header {
+  display: flex;
+} */
+/* .container-fluid {
+  background-color: #3b429f;
+} */
