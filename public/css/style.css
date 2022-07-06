@@ -5,7 +5,11 @@ html {
 body {
   width: 100%;
   margin: 0;
-  background-image: url("/Users/thiernosissoko/hopehack-1/public/img/tim-mossholder-WE_Kv_ZB1l0-unsplash.jpg");
+  color: black; 
+   background-color: #B5BAD0;
+
+  font-family: Helvetica, sans-serif;
+ 
 }
 .logo1 img {
   width: 100px;
@@ -18,10 +22,20 @@ body {
 }
 /* nav {
   width: 100%;
+
+  background-color: #7389AE;
+}
+nav img{
+margin: 0;
+max-height: 50px;
+}
+ul {
+
   background-color: #3b429f;
 } */
 
 /* ul {
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,22 +65,42 @@ li a {
 } */
 /* li a:hover {
   color: #151515;
-  background-color: #aa7dce;
-} */
 
-/* li a:active {
-  background-color: #a8577e;
-} */
+  background-color: #416788;
+}
+
+li a:active {
+  background-color: #5A789B;
+}
+
+
 
 footer {
   margin: 0;
   width: 100%;
   text-align: center;
+  color: #151515;
+  background-color: #7389AE;
 }
+.contentSection{
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+  color: #fff;
+  flex-direction: row;
+  padding: 30px; 
+}
+.text{
+  background:#5A789B;
+  margin: 1rem;
+  border: #7389AE solid;
+  border-radius: 1rem;
+  width: 25%;
 
+}
 main {
   text-align: center;
-  min-height: calc(100vh - 190.6px);
+  min-height: calc(100vh - 179px);
   padding-bottom: -90.8px;
 }
 
@@ -114,7 +148,7 @@ main {
 }
 
 #heroText a {
-  background: #a8577e;
+  background: #5A789B;
   color: #f7f7ff;
   text-decoration: none;
   padding: 1rem;
@@ -185,7 +219,7 @@ main {
   padding: 1rem;
 }
 .active {
-  background-color: #a8577e;
+  background-color: #5A789B;
 }
 .people {
   display: flex;
@@ -213,12 +247,14 @@ main {
   object-fit: cover;
 }
 
-.schoolDiv {
-  font-size: 1.5rem;
+
+
+.schoolDiv{
+  font-size:1.5rem;
 }
-.schoolDiv a {
-  font-size: 2rem;
-  background-color: #a8577e;
+.schoolDiv a{
+  font-size:2rem;
+  background-color:#5A789B;
 }
 @media only screen and (max-width: 600px) {
   .people {
@@ -226,7 +262,9 @@ main {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
+
     grid-row-gap: 0px;
+
   }
   .person {
     margin: auto auto 0 auto;
@@ -266,5 +304,20 @@ main {
   text-align: center;
   margin: auto;
 }
+
+ol{
+  text-align: center;
+  margin:auto;
+
+  position: absolute;
+  left: 50%;
+
+  transform:translate(-50%);
+}
+.calendar p{
+  text-align: left;
+}
+
 /* .logo1 {
 } */
+
