@@ -2,11 +2,11 @@ html {
   overflow-x: hidden;
   width: 100%;
 }
-body {
-  width: 100%;
-  margin: 0;
+body{
+  width:100%;
+  margin:0;
+  background-color: #B5BAD0;
   color: #fff; 
-   background-color: #B5BAD0;
   font-family: Helvetica, sans-serif;
   background-image: url("/Users/thiernosissoko/hopehack-1/public/img/tim-mossholder-WE_Kv_ZB1l0-unsplash.jpg");
 }
@@ -281,4 +281,16 @@ main {
   width:60%;
   text-align: center;
   margin:auto
+}
+ol{
+  text-align: center;
+  margin:auto;
+
+  position: absolute;
+  left: 50%;
+
+  transform:translate(-50%);
+}
+.calendar p{
+  text-align: left;
 }

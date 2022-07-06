@@ -25,7 +25,7 @@
                     <a href="/about">About</a>
                 </li>
                 <li>
-                  <a href="/calendar">Calendar</a>
+                  <a class="active" href="/calendar">Calendar</a>
                 </li>
                 <li>
                     <a href="/contact">Contact</a>
@@ -35,31 +35,49 @@
     </header>
 
 <main>
-    <h2>Find a list of schools from our partner cities!</h2>
-    <form style="text-align:center;" method="POST" action="/firstAPI">
-        <label for="cityOption">Choose your City</label>
-            <select name="cityQuery"id="cityOption" >
-                <option value="houston">Houston</option>
-                <option value="atlanta">Atlanta</option>
-                <option value="charlotte">Charlotte</option>
-                <option value="richmond">Richmond</option>
-            </select>
-        <label for="schoolType">Choose Schools Type</label>
-            <select name="schoolType" id="schoolType">
-                <option value="elementarySchool">Elementary</option>
-                <option value="middleSchool">Middle</option>
-                <option value="highSchool">HighSchool</option>
-                <option value="college">College</option>
-            </select>
+    <h2>Calendar & Admin tools</h2>
+    <form style="text-align:center;" method="POST" action="/calendarPOST">
+            <label for="searchBox">Enter Date</label>
+            <input
+                type="date"
+                name="date"
+                id="searchBox"
+                min="2022-07-05"
+                max="2023-12-31"
+                required
+            />
+        <label for="searchBox2">Enter Event Name</label>
+            <input
+                type="text"
+                name="eventName"
+                id="searchBox2"
+                placeholder="Enter Event name"
+                required
+            />
         <input
             type="submit"
             id="submitButton"
             value="Search"
         />
     </form>
+    <a href="/calendar">Log out</a>
+    <div class="wrapper">
+        <div class="schoolDiv">
+            <ol>
+          <% if( result != null){ %> 
+           <% Object.keys(result).forEach(function(num){ %>
+            <li class="calendar">
+            <p> <%-result[num].date %> - <%-result[num].event%> </p>
+          </li>
+          <% }) %> <% } else {%>
+          <div class="error">No Calendars found</div>
+          <%} %>
+        </ol>
+        </div>
+      </div>
 </main>
     <footer>
-        <p>Copyright &copy; 2022 | ThinkBeyond Inc</p>
+        <p>Copyright &copy; 2022 | Hope Hacks Group</p>
         <a href="https://www.facebook.com/"><img class="logo" src="/img/facebook.png"alt="facebook-logo"></a>
         <a href="https://www.linkedin.com/"><img class="logo" src="/img/linkedin.png" alt="linkedin-logo"></a>
         <a href="https://www.instagram.com/"><img class="logo" src="/img/instagram.png" alt="instagram-logo"></a>
