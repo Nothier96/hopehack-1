@@ -5,8 +5,8 @@ html {
 body {
   width: 100%;
   margin: 0;
-  /* color: #fff; */
-  /* background-color: #B5BAD0; */
+  color: #fff; 
+   background-color: #B5BAD0;
   font-family: Helvetica, sans-serif;
   background-image: url("/Users/thiernosissoko/hopehack-1/public/img/tim-mossholder-WE_Kv_ZB1l0-unsplash.jpg");
 }
@@ -56,21 +56,31 @@ li a:active {
 }
 
 footer {
-  bottom: ;
   margin: 0;
   width: 100%;
   text-align: center;
   color: #fff;
   background-color: #7389AE;
 }
-.aboutUs{
+.contentSection{
   display: flex;
+  justify-content: center;
+  min-width: 100%;
+  color: #fff;
+  flex-direction: row;
+  padding: 30px; 
+}
+.text{
+  background:#5A789B;
+  margin: 1rem;
+  border: #7389AE solid;
+  border-radius: 1rem;
+  width: 25%;
 
 }
-.meetUS
 main {
   text-align: center;
-  min-height: calc(100vh - 190.6px);
+  min-height: calc(100vh - 179px);
   padding-bottom: -90.8px;
 }
 
@@ -217,42 +227,53 @@ main {
   object-fit: cover;
 }
 
-.schoolDiv {
-  font-size: 1.5rem;
+
+.schoolDiv{
+  font-size:1.5rem;
 }
-.schoolDiv a {
-  font-size: 2rem;
-  background-color: #5A789B;
+.schoolDiv a{
+  font-size:2rem;
+  background-color:#5A789B;
 }
-@media only screen and (max-width: 600px) {
-  .people {
-    /* flex-direction: column; */
-    flex-wrap: wrap;
+@media only screen and (max-width:600px){
+  .people{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+
   }
-  .person {
-    margin: auto;
-  }
-  .person img {
-    height: 25vh;
-    width: auto;
-  }
-  form {
-    display: flex;
+  .person{
+    margin:auto auto 0 auto;
+    /* margin:auto; */
+    text-align: center;
+    display:flex;
     flex-direction: column;
-    width: 50%;
-    margin: auto;
+    justify-content: center;
   }
-  nav {
-    width: 100%;
+  
+.person:nth-child(2){
+  margin-right: 0rem;
+}
+
+  form{
+    display:flex;
+    flex-direction:column;
+    width:50%;
+    margin:auto;
   }
-  nav ul {
-    padding: 0;
+  nav{
+    width:100%;
   }
-  nav li {
-    margin: 0;
+  nav ul{
+    padding:0;
+  }
+  nav li{
+    margin:0;
     /* padding:0; */
   }
-  nav a {
+  nav a{
     font-size: 1.2rem;
   }
 }
